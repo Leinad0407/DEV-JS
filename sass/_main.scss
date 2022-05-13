@@ -1,0 +1,258 @@
+main{
+     background-color: rgb(245, 245, 245);
+     margin-top: 6%;
+}
+
+.mnav li a{
+    color: black !important;
+    font-size: 20px;
+}
+
+.firstPost{
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.firstPost div{
+    margin-top: 0.6rem;
+}
+
+
+
+.firstPost .col:nth-child(3){
+    h6{
+        margin: 0px;
+    }
+}
+
+
+.firstPost .col:nth-child(5){
+    h3{
+        font-size: 20px;
+    }
+}
+
+.firstPost .col:nth-child(7){
+
+        font-size: 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;   
+}
+
+.firstPost .col:nth-child(9){
+    font-size: 10px;
+}
+
+.firstPost .col:nth-child(11){
+    font-size: 10px;
+    text-align:start;
+    button{
+        font-size: 12px;
+        padding: 0.4%;
+    }
+}
+
+/*Second post*/
+
+div .secondPost{
+    background-color: #fff;
+    border-radius: 16px;
+    margin-top: 0.8rem;
+}
+
+.secondPost div{
+    margin-top: 0.6rem;
+}
+
+
+
+.secondPost .col:nth-child(2){
+    h6{
+        margin: 0px;
+    }
+}
+
+
+.secondPost .col:nth-child(4){
+    h3{
+        font-size: 20px;
+    }
+}
+
+.secondPost .col:nth-child(6){
+
+        font-size: 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;   
+}
+
+.secondPost .col:nth-child(8){
+    font-size: 10px;
+}
+
+.secondPost .col:nth-child(10){
+    font-size: 10px;
+    text-align:start;
+    button{
+        font-size: 12px;
+        padding: 0.4%;
+    }
+}
+
+/*dirth post*/
+
+div .thirdPost{
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 0.8rem;
+}
+
+.thirdPost div{
+    margin-top: 0.6rem;
+}
+
+
+
+.thirdPost .col:nth-child(2){
+    h6{
+        margin: 0px;
+    }
+}
+
+
+.thirdPost .col:nth-child(4){
+    h3{
+        font-size: 20px;
+    }
+}
+
+.thirdPost .col:nth-child(6){
+
+        font-size: 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;   
+}
+
+.thirdPost .col:nth-child(8){
+    font-size: 10px;
+}
+
+.thirdPost .col:nth-child(10){
+    font-size: 10px;
+    text-align:start;
+    button{
+        font-size: 12px;
+        padding: 0.4%;
+    }
+}
+
+
+/*fourth post*/
+
+div .fourthPost{
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 0.8rem;
+}
+
+.fourthPost div{
+    margin-top: 0.6rem;
+}
+
+
+
+.fourthPost .col:nth-child(2){
+    h6{
+        margin: 0px;
+    }
+}
+
+
+.fourthPost .col:nth-child(4){
+    h3{
+        font-size: 20px;
+    }
+}
+
+.fourthPost .col:nth-child(6){
+
+        font-size: 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;   
+}
+
+.fourthPost .col:nth-child(8){
+    font-size: 10px;
+}
+
+.fourthPost .col:nth-child(10){
+    font-size: 10px;
+    text-align:start;
+    button{
+        font-size: 12px;
+        padding: 0.4%;
+    }
+}
+
+/*fourth post*/
+
+div .fifthPost{
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 0.8rem;
+}
+
+.fifthPost div{
+    margin-top: 0.6rem;
+}
+
+
+
+.fifthPost .col:nth-child(2){
+    h6{
+        margin: 0px;
+    }
+}
+
+
+.fifthPost .col:nth-child(4){
+    h3{
+        font-size: 20px;
+    }
+}
+
+.fifthPost .col:nth-child(6){
+
+        font-size: 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;   
+}
+
+.fifthPost .col:nth-child(8){
+    font-size: 10px;
+}
+
+.fifthPost .col:nth-child(10){
+    font-size: 10px;
+    text-align:start;
+    button{
+        font-size: 12px;
+        padding: 0.4%;
+    }
+}
+
+

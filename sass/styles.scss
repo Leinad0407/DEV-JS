@@ -1,0 +1,61 @@
+main{
+    background-color: rgb(245, 245, 245);
+}
+@mixin styleButton {
+ width: 100%;
+ align-items: center; 
+ color: rgb(59, 73, 223);  
+ border:1px solid rgb(59, 73, 223);
+}
+
+@mixin efectoslistas{
+    background-color: rgba(47, 58, 178, 0.1);
+    border-radius: 2px;
+    text-decoration: underline !important;
+    
+}
+
+@import "navbar";
+@import "asideIzq";
+@import "main";
+@import "asideDer";
+@import "footer";
+
+
+@media (min-width:200px) and (max-width:767px){
+    .Encabezado{
+        margin-top: 17% !important;
+        margin-bottom: 6%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    .firstCardAsideIzq{
+        margin-top: 45px;
+    }
+
+    .mnav{
+        margin-top: 45px;
+    }
+
+    .aiFB button{
+        font-size: 13px;
+    }
+
+    .aiFR{
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 720px){
+    .containerIz{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px){
+    .containerDer{
+        display: none !important;
+    }
+}
