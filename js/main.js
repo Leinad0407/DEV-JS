@@ -46,12 +46,13 @@ const onGetRequest = (person) => {
 
                 for(let property in response ) {
                     response[property]
-                    console.log(response[property])
+                    
                     remotePostList.push(response[property])
                 }
 
                 console.log(remotePostList)
                 renderCointainersPosts(remotePostList)
+                renderCointainersPosts2(remotePostList)
             
             }
         }
@@ -66,7 +67,56 @@ const onGetRequest = (person) => {
 onGetRequest();
 
 //Función para generar todos los post en el home//
-const createPostsList= (post,index) =>{
+let okPostsList=[]
+
+
+const createPostsList= (postLista,index) =>{
+//se llaman las etiquetas para organizar el contenido de acuerdo a estilos//
+    let divMaestro=document.createElement('div')
+    divMaestro.classList.add('col')
+    divMaestro.classList.add('col-12')
+    divMaestro.classList.add('col-xs-12')
+    divMaestro.classList.add('col-sm-12')
+    divMaestro.classList.add('col-md-9')
+    divMaestro.classList.add('col-lg-9')
+    divMaestro.classList.add('col-xl-6')
+    divMaestro.classList.add('col-xxl-6')
+
+
+
+    let divRow=document.createElement('div')
+    divRow.classList.add('row')
+    let divUserImg=document.createElement('div')
+    divUserImg.classList.add('col')
+    divUserImg.classList.add('col-2')
+    divUserImg.classList.add('col-md-2')
+    let divUserName=document.createElement('div')
+    divUserName.classList.add('col')
+    divUserName.classList.add('col-8')
+    divUserName.classList.add('col-md-10')
+    let h6postUserName=document.createElement('h6')
+    let postDate=document.createElement('p')
+    
+    let divPostTitle=document.createElement('div')
+    divPostTitle.classList.add('col')
+    divPostTitle.classList.add('col-8')
+    divPostTitle.classList.add('col-md-10')
+    let h3postTitle=document.createElement('h3')
+    //faltarían los divs de hashtags//
+    let divInteractions=document.createElement('div')
+    divInteractions.classList.add('col')
+    divInteractions.classList.add('col-7')
+    divInteractions.classList.add('col-md-6')
+    let spanReactions = document.createElement('span')
+    let spanComments = document.createElement('span')
+
+    let divRead=document.createElement('div')
+    divRead.classList.add('col')
+    divRead.classList.add('col-4')
+    divRead.classList.add('col-md-3')
+    let spanRead = document.createElement('span')
+
+    let divMasterPostList=document.querySelector('#homePosts')
 
     let userName = document.querySelector('.userNamePost');
     let date = document.querySelector('.postDate');
@@ -76,47 +126,158 @@ const createPostsList= (post,index) =>{
     const reactionsQty = document.querySelector('.postReactions')
     const timeRead = document.querySelector('.postRead');
     const divContainer = document.createElement('div')
-    console.log(post)
-    console.log(post.name)
-    console.log(post.date)
+
+
+    
+    postInfo={
     // etsamos creando un objeto con lo que recibimos del servidor//
     //se debería guardar en un generador de objeto y mandarlo a un array?//
     //de esa manera podemos ejecutar una función que renderice ese array en el DOM//
-    userName.textContent=post.name
-    date.textContent=post.date
-    reactionsQty.textContent=post.reactions
-    // hashtagsGroup.textContent=post.hashtags
-    commentsQty.textContent=post.comments
-    timeRead.textContent = post.read
+    userName:`${postLista.name} ${postLista.lastname}`,
+    date:postLista.date,
+    title:postLista.title,
+    hashtagsGroup: postLista.hashtags,
+    commentsQty: postLista.comments,
+    reactionsQty: postLista.reactions,
+    timeRead: postLista.read,
+    }
+    okPostsList.push(postInfo)
+    console.log(okPostsList)
+    
+    
+    okPostsList.forEach((singlePostInfo)=>{
+        userName.textContent=singlePostInfo.userName
+        date.textContent=singlePostInfo.date
+        title.textContent=singlePostInfo.title
+    // hashtagsGroup.textContent=singlePostInfo.hashtagsGroup[1]
+        commentsQty.textContent=singlePostInfo.commentsQty
+        reactionsQty.textContent=singlePostInfo.reactionsQty
+        timeRead.textContent=singlePostInfo.timeRead
+        
+    })
 
+    okPostsList.forEach((singlePostInfo)=>{
+        
+        
+    })
     
     
+}
+//*****esta es la lista renderizada buena*****//
+const renderRemoteList=(listaposts)=>{
+    let divMaestro=document.createElement('div')
+    divMaestro.classList.add('col')
+    divMaestro.classList.add('col-12')
+    divMaestro.classList.add('col-xs-12')
+    divMaestro.classList.add('col-sm-12')
+    divMaestro.classList.add('col-md-9')
+    divMaestro.classList.add('col-lg-9')
+    divMaestro.classList.add('col-xl-6')
+    divMaestro.classList.add('col-xxl-6')
+
+    let divRow=document.createElement('div')
+    divRow.classList.add('row')
+    divRow.classList.add('secondPost')
+    let divUserImg=document.createElement('div')
+    divUserImg.classList.add('col')
+    divUserImg.classList.add('col-2')
+    divUserImg.classList.add('col-md-2')
+    let divUserName=document.createElement('div')
+    divUserName.classList.add('col')
+    divUserName.classList.add('col-8')
+    divUserName.classList.add('col-md-10')
+    let h6postUserName=document.createElement('h6')
+    let postDate=document.createElement('p')
     
+    let divPostTitle=document.createElement('div')
+    divPostTitle.classList.add('col')
+    divPostTitle.classList.add('col-8')
+    divPostTitle.classList.add('col-md-10')
+    let h3postTitle=document.createElement('h3')
+
+    let divHashtags = document.querySelector('#hashtagGroup')
+    //faltarían los divs de hashtags//
+    let divInteractions=document.createElement('div')
+    divInteractions.classList.add('col')
+    divInteractions.classList.add('col-7')
+    divInteractions.classList.add('col-md-6')
+    let spanReactions = document.createElement('span')
+    let spanComments = document.createElement('span')
+
+    let divRead=document.createElement('div')
+    divRead.classList.add('col')
+    divRead.classList.add('col-4')
+    divRead.classList.add('col-md-3')
+    let spanRead = document.createElement('span')
+
+    let btnSave = document.createElement('button')
+    btnSave.classList.add('btn')
+    btnSave.classList.add('btn-secondary')
+
+    let divMasterPostList=document.querySelector('#homePosts')
+    if (listaposts.hashtags.lenght > 0){
+        listaposts.hashtags.forEach((tags,index)=>{
+            let spanTag = document.createElement('span')
+            spanTag.textContent = tags[index]
+            divHashtags.appendChild.spanTag
+        })
+    }
+
+    h6postUserName.textContent = `${listaposts.name} ${listaposts.lastname}`
+    postDate.textContent =listaposts.date
+
+    h3postTitle.textContent=listaposts.title
+
+    spanReactions.textContent = listaposts.reactions
+    spanComments.textContent = listaposts.comments
+
+    spanRead.textContent=listaposts.read
+
+    btnSave.textContent="save"
+
+    divUserName.appendChild(h6postUserName)
+    divUserName.appendChild(postDate)
+
+    divPostTitle.appendChild(h3postTitle)
+
+    divInteractions.appendChild(spanReactions)
+    divInteractions.appendChild(spanComments)
+
+    divRead.appendChild(spanRead)
+    divRead.appendChild(btnSave)
+
+
+        
+    //Aquí deberíamos empezar a asignar datos a las etiquetas creadas más arriba//
+    divRow.appendChild(divUserImg)
+    divRow.appendChild(divUserName)
+    divRow.appendChild(divPostTitle)
+    divRow.appendChild(divHashtags)
+    divRow.appendChild(divInteractions)
+    divRow.appendChild(divRead)
+    console.log(divRow)
+    divMasterPostList.appendChild(divRow)
     
-    
-    
-    console.log(userName)
-    
-    divContainer.appendChild(userName)
-    divContainer.appendChild(date)
-    divContainer.appendChild(reactionsQty)
-    // divContainer.appendChild(hashtagsGroup)
-    divContainer.appendChild(commentsQty)
-    divContainer.appendChild(timeRead)
-    console.log(divContainer)
+   
    
 }
-
-const renderCointainersPosts = (postList)=>{
+const renderCointainersPosts2 = (remotePostList)=>{
     // while (divContainer){}
    
-    postList.forEach((post,index)=>{
-        createPostsList(post,index)
+    remotePostList.forEach((postLista,index)=>{
+      renderRemoteList(postLista,index)
     })
 
 }
 
-document.body.appendChild(divContainer)
 
+const renderCointainersPosts = (remotePostList)=>{
+    // while (divContainer){}
+   
+    remotePostList.forEach((postLista,index)=>{
+        createPostsList(postLista,index)
+    })
+
+}
 
 
