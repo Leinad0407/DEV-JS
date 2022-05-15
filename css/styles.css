@@ -348,6 +348,11 @@ div .fifthPost {
   padding: 0.4%;
 }
 
+#btnSave {
+  padding: 2.5px 5px;
+  margin: 0 0 0 5px;
+}
+
 .adl ul a:hover {
   background-color: rgba(47, 58, 178, 0.1);
   border-radius: 2px;
