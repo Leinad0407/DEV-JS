@@ -182,6 +182,10 @@ const renderRemoteList=(listaposts)=>{
     divUserImg.classList.add('col')
     divUserImg.classList.add('col-2')
     divUserImg.classList.add('col-md-2')
+    let imgLabel = document.createElement('img')
+    imgLabel.classList.add('userImg')
+    imgLabel.setAttribute('src','https://res.cloudinary.com/practicaldev/image/fetch/s--Ea1OGrCb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1/f451a206-11c8-4e3d-8936-143d0a7e65bb.png')
+
     let divUserName=document.createElement('div')
     divUserName.classList.add('col')
     divUserName.classList.add('col-8')
@@ -195,14 +199,24 @@ const renderRemoteList=(listaposts)=>{
     divPostTitle.classList.add('col-md-10')
     let h3postTitle=document.createElement('h3')
 
-    let divHashtags = document.querySelector('#hashtagGroup')
-    //faltarían los divs de hashtags//
+    let divHashtags = document.createElement('div')
+    let hashtagList = listaposts.hashtags
+    
+    
     let divInteractions=document.createElement('div')
     divInteractions.classList.add('col')
     divInteractions.classList.add('col-7')
     divInteractions.classList.add('col-md-6')
     let spanReactions = document.createElement('span')
+    spanReactions.classList.add('interactionsSpan')
+    let svgReactions = document.createElement('img')
+    svgReactions.classList.add('interactionsIcons')
+    svgReactions.setAttribute('src','./img/heart.svg')
     let spanComments = document.createElement('span')
+    spanComments.classList.add('interactionsSpan')
+    let svgComments = document.createElement('img')
+    svgComments.classList.add('interactionsIcons')
+    svgComments.setAttribute('src','./img/chat.svg')
 
     let divRead=document.createElement('div')
     divRead.classList.add('col')
@@ -211,17 +225,22 @@ const renderRemoteList=(listaposts)=>{
     let spanRead = document.createElement('span')
 
     let btnSave = document.createElement('button')
-    btnSave.classList.add('btn')
-    btnSave.classList.add('btn-secondary')
+    btnSave.classList.add('saveButton')
+    // btnSave.classList.add('btn-secondary')
 
     let divMasterPostList=document.querySelector('#homePosts')
-    if (listaposts.hashtags.lenght > 0){
-        listaposts.hashtags.forEach((tags,index)=>{
+
+
+    // if (listaposts.hashtags.lenght > 0){
+        hashtagList.forEach((tags,index)=>{
+            index++
+            
             let spanTag = document.createElement('span')
-            spanTag.textContent = tags[index]
-            divHashtags.appendChild.spanTag
+            spanTag.textContent = `# ${tags.tag1}`
+            
+            divHashtags.appendChild(spanTag)
         })
-    }
+    
 
     h6postUserName.textContent = `${listaposts.name} ${listaposts.lastname}`
     postDate.textContent =listaposts.date
@@ -234,13 +253,14 @@ const renderRemoteList=(listaposts)=>{
     spanRead.textContent=listaposts.read
 
     btnSave.textContent="save"
-
+    divUserImg.appendChild(imgLabel)
     divUserName.appendChild(h6postUserName)
     divUserName.appendChild(postDate)
 
     divPostTitle.appendChild(h3postTitle)
-
+    divInteractions.appendChild(svgReactions)
     divInteractions.appendChild(spanReactions)
+    divInteractions.appendChild(svgComments)
     divInteractions.appendChild(spanComments)
 
     divRead.appendChild(spanRead)
