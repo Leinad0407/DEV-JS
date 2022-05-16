@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img class="site-logo__img" src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="DEV Community">
             Create Post
           </a>
@@ -33,7 +33,7 @@
             </div>
             <div class="cuadrosdetexto">
                 <div class="mb-3">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea placeholder="Escribe un título de tu post" name='title' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
             </div>
             <div class="dropdown">
@@ -41,9 +41,10 @@
                   Add up 4 tags...
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">#JavsScript</a></li>
-                  <li><a class="dropdown-item" href="#">#FrontEnd</a></li>
-                  <li><a class="dropdown-item" href="#">#BackEnd</a></li>
+                  <li><a class="dropdown-item" href="#" id="hash1">#JavaScript</a></li>
+                  <li><a class="dropdown-item" href="#" id="hash2">#FrontEnd</a></li>
+                  <li><a class="dropdown-item" href="#" id="hash3">#BackEnd</a></li>
+                  <li><a class="dropdown-item" href="#" id="hash4">#Cryptobro</a></li>
                 </ul>
               </div>
               <div class="lineadebotones">
@@ -59,7 +60,7 @@
                 <button type="button" class="c-btn c-btn--icon-alone crayons-tooltip__activator toolbar-btn formatter-btn mr-1" tabindex="-1" aria-label="Upload image"><svg class="crayons-icon c-btn__icon" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4v14l9.292-9.294a1 1 0 0 1 1.414 0L20 15.01V5zM2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg></button>
               </div>
               <div class="mb-3" id="recuadrogrande">
-                <textarea class="form-control1" id="exampleFormControlTextarea2" rows="3"></textarea>
+                <textarea placeholder="Escribe el contenido del post" name='bodyPost' class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
               </div>
         </div>
         <div class="col-3">
@@ -69,11 +70,13 @@
         </div>
         <footer>
           <div class="botonesfinales">
-            <button type="button" class="btn btn-primary btn-sm">Publish</button>
+            <button type="button" class="btn btn-primary btn-sm" id="pubBtn">Publish</button>
             <button type="button" class="btn btn-secondary btn-sm">Save draft</button>
             <button type="button" class="c-btn c-btn--icon-alone" id="post-options-btn" title="Post options" aria-label="Post options" aria-expanded="false" aria-controls="post-options-dropdown" aria-haspopup="true"><svg class="crayons-icon c-btn__icon" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 1 9.5 5.5v11L12 23l-9.5-5.5v-11L12 1zm0 2.311L4.5 7.653v8.694l7.5 4.342 7.5-4.342V7.653L12 3.311zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg></button>
             <button type="button" class="btn btn-secondary btn-sm">Revert new hanges</button>
           </div>
         </footer>
+
+        <script src="/js/post.js"></script>
 </body>
 </html>
