@@ -66,10 +66,10 @@ const sendPost=(postContent)=>{
     let body = document.querySelector('#bodyPost').value
     let d = new Date();
     let year = d.getFullYear();
-    let month =d.getMonth();
+    let month =d.getMonth()+1;
     let day = d.getDate();
 
-    let fecha = `${year} / ${month}/${day}`
+    let fecha = `${year} / 0${month}/${day}`
     post.name = 'Pantuflito'
     post.lastname = 'González'
     post.title = titlePost
@@ -128,13 +128,13 @@ const sendPost=(postContent)=>{
    
 const clickPublish=(post)=>{
     let pubBtn = document.querySelector('#pubBtn')
-    // console.log(pubBtn)
+    
     pubBtn.addEventListener('click',()=>{
         sendPost()
         
         console.log('si jala')
         console.log(post)
-        // onGeneratePost(post)
+        
         
     })
 }
