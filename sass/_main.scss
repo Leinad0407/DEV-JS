@@ -276,7 +276,7 @@ div .fifthPost{
 }
 
 .interactionsIcons{
-    height: 60%;
+    height: 1rem;
     padding: 1px;
     margin: 0 10px 0 0;
 }
@@ -286,9 +286,16 @@ div .fifthPost{
 }
 
 .userImg{
-    height: 50%;
+    height: 2rem;
     width: auto;
     border-radius: 360px;
 }
 
+#titleLink{
+    color: black;
+    text-transform: uppercase;
+}
+.reactionsTexts{
+    font-size: small;
+}
 

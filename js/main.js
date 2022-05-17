@@ -52,7 +52,7 @@ const onGetRequest = (person) => {
 
                 console.log(remotePostList)
                 renderCointainersPosts(remotePostList)
-                renderCointainersPosts2(remotePostList)
+                renderCointainersPosts2(remotePostList.reverse())
             
             }
         }
@@ -184,7 +184,9 @@ const renderRemoteList=(listaposts)=>{
     divUserImg.classList.add('col-md-2')
     let imgLabel = document.createElement('img')
     imgLabel.classList.add('userImg')
-    imgLabel.setAttribute('src','https://res.cloudinary.com/practicaldev/image/fetch/s--Ea1OGrCb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1/f451a206-11c8-4e3d-8936-143d0a7e65bb.png')
+
+    //****Aquí se debe crear una imagen de perfil random *//
+    imgLabel.setAttribute('src',listaposts.userImg)
 
     let divUserName=document.createElement('div')
     divUserName.classList.add('col')
@@ -199,6 +201,8 @@ const renderRemoteList=(listaposts)=>{
     delButton.setAttribute('id','deleteButton')
     delButton.textContent='Delete'
     let h6postUserName=document.createElement('h6')
+    let anchorUsername= document.createElement('a')
+    anchorUsername.setAttribute('href','/')
     let postDate=document.createElement('p')
     
     let divPostTitle=document.createElement('div')
@@ -206,10 +210,16 @@ const renderRemoteList=(listaposts)=>{
     divPostTitle.classList.add('col-8')
     divPostTitle.classList.add('col-md-10')
     let h3postTitle=document.createElement('h3')
+    let anchorPostTitle = document.createElement('a')
+    anchorPostTitle.setAttribute('href','./postView.html')
+    anchorPostTitle.setAttribute('id','titleLink')
 
     let divHashtags = document.createElement('div')
     let spanTag = document.createElement('span')// este span se agrego para la segunda iteración de objetos
     let hashtagList = listaposts.hashtags
+    
+    console.log(listaposts.hashtags)
+    console.log(hashtagList)
     
     
     let divInteractions=document.createElement('div')
@@ -217,11 +227,13 @@ const renderRemoteList=(listaposts)=>{
     divInteractions.classList.add('col-8')
     divInteractions.classList.add('col-md-8')
     let spanReactions = document.createElement('span')
+    spanReactions.classList.add('reactionsTexts')
     spanReactions.classList.add('interactionsSpan')
     let svgReactions = document.createElement('img')
     svgReactions.classList.add('interactionsIcons')
     svgReactions.setAttribute('src','./img/heart.svg')
     let spanComments = document.createElement('span')
+    spanComments.classList.add('reactionsTexts')
     spanComments.classList.add('interactionsSpan')
     let svgComments = document.createElement('img')
     svgComments.classList.add('interactionsIcons')
@@ -253,17 +265,17 @@ const renderRemoteList=(listaposts)=>{
 
     //Aquí termina la iteración de la primer estrutura de datos
 
-    //Función para iterar los nuevos hashtags//
+    //**********Función para iterar los nuevos hashtags************//
     // hashtagList.forEach((tags)=>{
     //     hashtagArray.push(tags)
     // })
     // console.log(hashtagArray)
     
 
-    h6postUserName.textContent = `${listaposts.name} ${listaposts.lastname}`
+    anchorUsername.textContent = `${listaposts.name} ${listaposts.lastname}`
     postDate.textContent =listaposts.date
 
-    h3postTitle.textContent=listaposts.title
+    anchorPostTitle.textContent=listaposts.title
 
     spanTag.textContent = hashtagArray
 
@@ -274,6 +286,7 @@ const renderRemoteList=(listaposts)=>{
 
     btnSave.textContent="save"
     divUserImg.appendChild(imgLabel)
+    h6postUserName.appendChild(anchorUsername)
     divUserName.appendChild(h6postUserName)
     divUserName.appendChild(postDate)
 
@@ -281,6 +294,7 @@ const renderRemoteList=(listaposts)=>{
 
     divHashtags.appendChild(spanTag)//agregamos el contenido al hastag
 
+    h3postTitle.appendChild(anchorPostTitle)
     divPostTitle.appendChild(h3postTitle)
     divInteractions.appendChild(svgReactions)
     divInteractions.appendChild(spanReactions)
