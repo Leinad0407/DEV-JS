@@ -59,8 +59,10 @@ main{
 
 div .secondPost{
     background-color: #fff;
+    border: 1px solid rgba(128, 128, 128, 0.349);
     border-radius: 16px;
     margin-top: 0.8rem;
+    padding: 0.8rem;
 }
 
 .secondPost div{
@@ -255,9 +257,38 @@ div .fifthPost{
     }
 }
 
-#btnSave{
-    padding:2.5px 5px;
-    margin: 0 0 0 5px;
+
+//como modifico el color del botón??//
+.saveButton{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 30px;
+    width: 3rem;
+    padding: 5px;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(202, 202, 202);
+    
+}
+
+.interactionsIcons{
+    height: 60%;
+    padding: 1px;
+    margin: 0 10px 0 0;
+}
+
+.interactionsSpan{
+    margin-right: 10px;
+}
+
+.userImg{
+    height: 50%;
+    width: auto;
+    border-radius: 360px;
 }
 
 
