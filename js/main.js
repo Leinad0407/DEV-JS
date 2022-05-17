@@ -188,8 +188,16 @@ const renderRemoteList=(listaposts)=>{
 
     let divUserName=document.createElement('div')
     divUserName.classList.add('col')
-    divUserName.classList.add('col-8')
-    divUserName.classList.add('col-md-10')
+    divUserName.classList.add('col-7')
+    divUserName.classList.add('col-md-7')
+    divForDelButton=document.createElement('div')
+    divForDelButton.classList.add('col')
+    divForDelButton.classList.add('col-3')
+    divForDelButton.classList.add('col-md-3')
+    let delButton = document.createElement('button')
+    
+    delButton.setAttribute('id','deleteButton')
+    delButton.textContent='Delete'
     let h6postUserName=document.createElement('h6')
     let postDate=document.createElement('p')
     
@@ -200,13 +208,14 @@ const renderRemoteList=(listaposts)=>{
     let h3postTitle=document.createElement('h3')
 
     let divHashtags = document.createElement('div')
+    let spanTag = document.createElement('span')// este span se agrego para la segunda iteración de objetos
     let hashtagList = listaposts.hashtags
     
     
     let divInteractions=document.createElement('div')
     divInteractions.classList.add('col')
-    divInteractions.classList.add('col-7')
-    divInteractions.classList.add('col-md-6')
+    divInteractions.classList.add('col-8')
+    divInteractions.classList.add('col-md-8')
     let spanReactions = document.createElement('span')
     spanReactions.classList.add('interactionsSpan')
     let svgReactions = document.createElement('img')
@@ -221,31 +230,42 @@ const renderRemoteList=(listaposts)=>{
     let divRead=document.createElement('div')
     divRead.classList.add('col')
     divRead.classList.add('col-4')
-    divRead.classList.add('col-md-3')
+    divRead.classList.add('col-md-4')
     let spanRead = document.createElement('span')
 
     let btnSave = document.createElement('button')
     btnSave.classList.add('saveButton')
-    // btnSave.classList.add('btn-secondary')
+    
 
     let divMasterPostList=document.querySelector('#homePosts')
 
 
-    // if (listaposts.hashtags.lenght > 0){
-        hashtagList.forEach((tags,index)=>{
-            index++
+    //Vieja iteración para primer estructura de datos//
+    let hashtagArray = []
+        // hashtagList.forEach((tags)=>{
+        //     index++
             
-            let spanTag = document.createElement('span')
-            spanTag.textContent = `# ${tags.tag1}`
+        //     let spanTag = document.createElement('span')
+        //     spanTag.textContent = `# ${tags.tag1}`
             
-            divHashtags.appendChild(spanTag)
-        })
+        //     divHashtags.appendChild(spanTag)
+        // })
+
+    //Aquí termina la iteración de la primer estrutura de datos
+
+    //Función para iterar los nuevos hashtags//
+    // hashtagList.forEach((tags)=>{
+    //     hashtagArray.push(tags)
+    // })
+    // console.log(hashtagArray)
     
 
     h6postUserName.textContent = `${listaposts.name} ${listaposts.lastname}`
     postDate.textContent =listaposts.date
 
     h3postTitle.textContent=listaposts.title
+
+    spanTag.textContent = hashtagArray
 
     spanReactions.textContent = listaposts.reactions
     spanComments.textContent = listaposts.comments
@@ -256,6 +276,10 @@ const renderRemoteList=(listaposts)=>{
     divUserImg.appendChild(imgLabel)
     divUserName.appendChild(h6postUserName)
     divUserName.appendChild(postDate)
+
+    divForDelButton.appendChild(delButton)
+
+    divHashtags.appendChild(spanTag)//agregamos el contenido al hastag
 
     divPostTitle.appendChild(h3postTitle)
     divInteractions.appendChild(svgReactions)
@@ -271,6 +295,7 @@ const renderRemoteList=(listaposts)=>{
     //Aquí deberíamos empezar a asignar datos a las etiquetas creadas más arriba//
     divRow.appendChild(divUserImg)
     divRow.appendChild(divUserName)
+    divRow.appendChild(divForDelButton)
     divRow.appendChild(divPostTitle)
     divRow.appendChild(divHashtags)
     divRow.appendChild(divInteractions)
