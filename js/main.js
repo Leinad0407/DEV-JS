@@ -216,7 +216,7 @@ const renderRemoteList=(listaposts)=>{
 
     let divHashtags = document.createElement('div')
     let spanTag = document.createElement('span')// este span se agrego para la segunda iteración de objetos
-    let hashtagList = listaposts.hashtags
+    let hashtagList = listaposts.hashtags ||[]
     
     console.log(listaposts.hashtags)
     console.log(hashtagList)
@@ -243,6 +243,7 @@ const renderRemoteList=(listaposts)=>{
     divRead.classList.add('col')
     divRead.classList.add('col-4')
     divRead.classList.add('col-md-4')
+    divRead.classList.add('reactionsTexts')
     let spanRead = document.createElement('span')
 
     let btnSave = document.createElement('button')
@@ -266,10 +267,10 @@ const renderRemoteList=(listaposts)=>{
     //Aquí termina la iteración de la primer estrutura de datos
 
     //**********Función para iterar los nuevos hashtags************//
-    // hashtagList.forEach((tags)=>{
-    //     hashtagArray.push(tags)
-    // })
-    // console.log(hashtagArray)
+    hashtagList.forEach((tags)=>{
+          hashtagArray.push('#'+tags)
+    })
+      console.log(hashtagArray)
     
 
     anchorUsername.textContent = `${listaposts.name} ${listaposts.lastname}`
