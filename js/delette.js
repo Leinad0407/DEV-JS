@@ -36,7 +36,7 @@ const onPostRequest = (person) => {
                 }
   
                 console.log(personList, 'personList')
-                renderList(personList);
+                //renderList(personList);
             }
         }
     });
@@ -61,8 +61,7 @@ const onPostRequest = (person) => {
           if(xhr.readyState === 4){
               if(xhr.status === 200){
                   alert(` El post de esta persona ${idPerson} fue eliminado`)
-                  onGuestRequest()
-               
+                  onGuestRequest()               
               }
           }
       });
@@ -76,30 +75,26 @@ const onPostRequest = (person) => {
     onGuestRequest()
     
 
-  const button = document.querySelector('#deleteButton');
+  const button = document.querySelectorAll('.deleteButton');
   const div = document.querySelector('div');
   
-  let person = {};
-  const personList = [];
-  
-  const createLi = (person, index) => {
-      
-    const button = document.createElement('button');
-    button.classList.add('btn-danger');
-    button.classList.add('btn');
-    button.textContent = 'Eliminar'
-    button.setAttribute('id', person.id)
+      console.log(button)
+      alert('button')
+    button.setAttribute('data-button', person.id)
     div.appendChild(button)
     button.addEventListener('click', (event) => {
+        console.log(event.target.id)
         const removeId = event.target.id;
         onDeleteRequest(removeId)
-        // renderList()
+        console.log(event.target.id)
+        renderList()
     });
-  };
+ 
   
+
   const renderList = (personListNew) => {
-    while(ul.children.length > 0) {
-        ul.firstChild.remove()
+    while(div.children.length > 0) {
+        div.firstChild.remove()
     }
     personListNew.forEach((person) => {
         createLi(person)
