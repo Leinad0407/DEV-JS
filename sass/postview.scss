@@ -1,0 +1,32 @@
+#espaciofixed{
+    height: 80px;
+    background-color: red;
+    border: 1px solid black;
+    position: static;
+}
+#postViewCard{
+    margin: 4rem;
+
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.sectionDivider{
+    width: 100%;
+}
+#divSplit{
+    width: 100%;
+}
+#bodyContainer{
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 10px;
+}
+.reactionsTexts{
+    font-size: small;
+    margin-right: 20px;
+}

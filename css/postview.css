@@ -1,0 +1,44 @@
+#espaciofixed {
+  height: 80px;
+  background-color: red;
+  border: 1px solid black;
+  position: static;
+}
+
+#postViewCard {
+  margin: 4rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionDivider {
+  width: 100%;
+}
+
+#divSplit {
+  width: 100%;
+}
+
+#bodyContainer {
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+}
+
+.reactionsTexts {
+  font-size: small;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=postview.css.map */
