@@ -382,8 +382,8 @@ div .fifthPost {
   margin-right: 10px;
 }
 
-.userImg {
-  height: 2rem;
+.userImgn {
+  height: 3rem;
   width: auto;
   border-radius: 360px;
 }
@@ -422,6 +422,65 @@ footer span:nth-child(9) {
 
 footer span:nth-child(13) {
   color: blue;
+}
+
+#espaciofixed {
+  height: 80px;
+  background-color: red;
+  border: 1px solid black;
+  position: static;
+}
+
+#postViewCard {
+  margin: 4rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionDivider {
+  width: 100%;
+}
+
+#divSplit {
+  width: 100%;
+}
+
+#bodyContainer {
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+}
+
+.reactionsTexts {
+  font-size: small;
+  margin-right: 20px;
+}
+
+#divCommentsGroup {
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+
+.userImg {
+  height: 2rem;
+  width: auto;
+  border-radius: 360px;
+}
+
+#bodyContainer {
+  margin: 0px;
 }
 
 @media (min-width: 200px) and (max-width: 767px) {
