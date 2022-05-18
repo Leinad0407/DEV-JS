@@ -183,7 +183,7 @@ const renderRemoteList=(listaposts)=>{
     divUserImg.classList.add('col-2')
     divUserImg.classList.add('col-md-2')
     let imgLabel = document.createElement('img')
-    imgLabel.classList.add('userImg')
+    imgLabel.classList.add('userImgn')
 
     //****Aquí se debe crear una imagen de perfil random *//
     imgLabel.setAttribute('src',listaposts.userImg)
@@ -339,5 +339,6 @@ const renderCointainersPosts = (remotePostList)=>{
     })
 
 }
+
 
 
