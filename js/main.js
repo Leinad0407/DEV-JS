@@ -199,7 +199,7 @@ const renderRemoteList=(listaposts)=>{
     divForDelButton.classList.add('col-md-3')
     let delButton = document.createElement('button')
     
-    delButton.setAttribute('id','deleteButton')
+    delButton.setAttribute('class','deleteButton')
     delButton.textContent='Delete'
     let h6postUserName=document.createElement('h6')
     let anchorUsername= document.createElement('a')
