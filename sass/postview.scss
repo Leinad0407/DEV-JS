@@ -5,11 +5,11 @@
     position: static;
 }
 #postViewCard{
-    margin: 4rem;
+    margin: 0rem;
+    padding: 10px;
 
     background-color: white;
-    border: 1px solid black;
-    border-radius: 20px;
+   
     display: flex;
     align-items: center;
     justify-items: center;
@@ -47,4 +47,42 @@
 }
 #divUserImg{
     width: 50%;
+}
+
+#postImg{
+    width: 100%;
+}
+
+#subButton{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+#newComment{
+    width: 100%;
+    margin: 0px;
+    border-radius: 5px;
+    
+}
+#divCommentsGroup{
+    background-color: whitesmoke;
+}
+.postInfo{
+    background-color: whitesmoke;
+}
+
+#coverImg{
+    width: 100%;
+    padding: 0px 0px 10px 0px ;
+    margin: 0px;
+}
+#divDetallesPost{
+    background-color: whitesmoke;
+    border: 2px solid rgb(219, 219, 219);
+    margin: 0px;
 }

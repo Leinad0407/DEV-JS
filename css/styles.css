@@ -356,14 +356,10 @@ div .fifthPost {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-items: center;
-  height: 30px;
+  height: 2rem;
   width: 3rem;
   padding: 5px;
   border: 1px solid rgba(128, 128, 128, 0);
@@ -375,11 +371,11 @@ div .fifthPost {
 .interactionsIcons {
   height: 1rem;
   padding: 1px;
-  margin: 0 10px 0 0;
+  margin: 0 5px 0 0;
 }
 
 .interactionsSpan {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .userImgn {
@@ -388,13 +384,30 @@ div .fifthPost {
   border-radius: 360px;
 }
 
-#titleLink {
+.titleLink {
   color: black;
   text-transform: uppercase;
 }
 
 .reactionsTexts {
   font-size: small;
+}
+
+#readAndSave {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  margin: 0px;
 }
 
 .adl ul a:hover {
@@ -432,10 +445,9 @@ footer span:nth-child(13) {
 }
 
 #postViewCard {
-  margin: 4rem;
+  margin: 0rem;
+  padding: 10px;
   background-color: white;
-  border: 1px solid black;
-  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,6 +492,54 @@ footer span:nth-child(13) {
 }
 
 #bodyContainer {
+  margin: 0px;
+}
+
+#divUserImg {
+  width: 50%;
+}
+
+#postImg {
+  width: 100%;
+}
+
+#subButton {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+#newComment {
+  width: 100%;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+#divCommentsGroup {
+  background-color: whitesmoke;
+}
+
+.postInfo {
+  background-color: whitesmoke;
+}
+
+#coverImg {
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+}
+
+#divDetallesPost {
+  background-color: whitesmoke;
+  border: 2px solid #dbdbdb;
   margin: 0px;
 }
 

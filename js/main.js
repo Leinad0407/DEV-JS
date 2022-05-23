@@ -45,6 +45,7 @@ const onGetRequest = (person) => {
                 console.log(response)
 
                 for(let property in response ) {
+                    console.log([property])
                     response[property]
                     
                     remotePostList.push(response[property])
@@ -112,7 +113,7 @@ const createPostsList= (postLista,index) =>{
 
     let divRead=document.createElement('div')
     divRead.classList.add('col')
-    divRead.classList.add('col-4')
+    divRead.classList.add('col-3')
     divRead.classList.add('col-md-3')
     let spanRead = document.createElement('span')
 
@@ -212,7 +213,7 @@ const renderRemoteList=(listaposts)=>{
     let h3postTitle=document.createElement('h3')
     let anchorPostTitle = document.createElement('a')
     anchorPostTitle.setAttribute('href','./postView.html')
-    anchorPostTitle.setAttribute('id','titleLink')
+    anchorPostTitle.classList.add('titleLink')
 
     let divHashtags = document.createElement('div')
     let spanTag = document.createElement('span')// este span se agrego para la segunda iteración de objetos
@@ -241,14 +242,15 @@ const renderRemoteList=(listaposts)=>{
 
     let divRead=document.createElement('div')
     divRead.classList.add('col')
-    divRead.classList.add('col-4')
-    divRead.classList.add('col-md-4')
+    divRead.classList.add('col-3')
+    divRead.classList.add('col-md-3')
     divRead.classList.add('reactionsTexts')
+    divRead.setAttribute('id','readAndSave')
     let spanRead = document.createElement('span')
-
+    
     let btnSave = document.createElement('button')
     btnSave.classList.add('saveButton')
-    
+      
 
     let divMasterPostList=document.querySelector('#homePosts')
 
@@ -317,6 +319,8 @@ const renderRemoteList=(listaposts)=>{
     divRow.appendChild(divRead)
     console.log(divRow)
     divMasterPostList.appendChild(divRow)
+
+    
     
    
    
@@ -339,6 +343,21 @@ const renderCointainersPosts = (remotePostList)=>{
     })
 
 }
+
+let titulos = document.querySelectorAll('.titleLink')
+console.log(titulos)
+    titulos.addEventListener('click',()=>{
+        let hashtag = ([property])
+
+    })
+    pubBtn.addEventListener('click',()=>{
+        sendPost()
+        
+        console.log('si jala')
+        console.log(post)
+        
+        
+    })
 
 
 
