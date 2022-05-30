@@ -79,7 +79,7 @@ const onPostRequest = (person) => {
   const div = document.querySelector('div');
   
       console.log(button)
-      alert('button')
+    //   alert('button')
     button.setAttribute('data-button', person.id)
     div.appendChild(button)
     button.addEventListener('click', (event) => {

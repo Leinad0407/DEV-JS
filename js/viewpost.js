@@ -22,7 +22,7 @@ const onGetRequest = (person) => {
         }
     });
 
-    const URL_FIREBASE = 'https://devto-72d84-default-rtdb.firebaseio.com/posts/-N2FBrtGVSTL_VCzcLDY.json/';
+    const URL_FIREBASE = 'https://devto-72d84-default-rtdb.firebaseio.com/posts/-N2J_rKo9jwauaJ9zpPZ.json/';
 
     xhr.open('GET', URL_FIREBASE );
     xhr.send();
@@ -44,6 +44,7 @@ const renderPostInfo = (postInfo) =>{
     let dateText= document.createElement('p')
     let userImg = document.createElement('img')
     userImg.setAttribute('src', postInfo.userImg)
+    userImg.setAttribute('id', "postImg")
     let titleText = document.createElement('h2')
     let tagsTexts =document.createElement('p')
     
@@ -63,7 +64,7 @@ const renderPostInfo = (postInfo) =>{
 
 
 
-    usernameText.textContent=postInfo.name
+    usernameText.textContent= `${postInfo.name} ${postInfo.lastname}`
     dateText.textContent=postInfo.date
 
     titleText.textContent=postInfo.title

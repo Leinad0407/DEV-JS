@@ -199,7 +199,7 @@ const renderRemoteList=(listaposts)=>{
     divForDelButton.classList.add('col-md-3')
     let delButton = document.createElement('button')
     
-    delButton.setAttribute('class','deleteButton')
+    delButton.setAttribute('id','deleteButton')
     delButton.textContent='Delete'
     let h6postUserName=document.createElement('h6')
     let anchorUsername= document.createElement('a')
@@ -346,18 +346,13 @@ const renderCointainersPosts = (remotePostList)=>{
 
 let titulos = document.querySelectorAll('.titleLink')
 console.log(titulos)
+
+// let hashtag = hash
     titulos.addEventListener('click',()=>{
-        let hashtag = ([property])
+        localStorage.setItem([property])
 
     })
-    pubBtn.addEventListener('click',()=>{
-        sendPost()
-        
-        console.log('si jala')
-        console.log(post)
-        
-        
-    })
+    
 
 
 

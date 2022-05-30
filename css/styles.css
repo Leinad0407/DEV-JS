@@ -437,6 +437,11 @@ footer span:nth-child(13) {
   color: blue;
 }
 
+#divMaestroShowPost {
+  background-color: whitesmoke;
+  height: auto;
+}
+
 #espaciofixed {
   height: 80px;
   background-color: red;
@@ -445,21 +450,17 @@ footer span:nth-child(13) {
 }
 
 #postViewCard {
-  margin: 0rem;
-  padding: 10px;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+}
+
+#postViewComments {
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid #dbdbdb;
+  width: 100%;
 }
 
 .sectionDivider {
@@ -495,12 +496,10 @@ footer span:nth-child(13) {
   margin: 0px;
 }
 
-#divUserImg {
-  width: 50%;
-}
-
+/*Este modifica el div de imagen de usauriod e post*/
 #postImg {
-  width: 100%;
+  height: 3rem;
+  border-radius: 360px;
 }
 
 #subButton {
@@ -527,19 +526,9 @@ footer span:nth-child(13) {
   background-color: whitesmoke;
 }
 
-.postInfo {
-  background-color: whitesmoke;
-}
-
 #coverImg {
   width: 100%;
   padding: 0px 0px 10px 0px;
-  margin: 0px;
-}
-
-#divDetallesPost {
-  background-color: whitesmoke;
-  border: 2px solid #dbdbdb;
   margin: 0px;
 }
 
