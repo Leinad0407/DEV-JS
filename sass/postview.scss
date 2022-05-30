@@ -1,3 +1,8 @@
+#divMaestroShowPost{
+    background-color: whitesmoke ;
+    height: auto;
+}
+
 #espaciofixed{
     height: 80px;
     background-color: red;
@@ -5,16 +10,34 @@
     position: static;
 }
 #postViewCard{
-    margin: 4rem;
+    width: 100%;
+    
 
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
+    
+    background-color: whitesmoke;
+    border: 1px solid rgb(219, 219, 219);
+    width: 100%;
+   
+    // display: flex;
+    // align-items: center;
+    // justify-items: center;
+    // align-content: center;
+    // justify-content: center;
+}
+#postViewComments{
+    width: 100%;
+    
+
+    
+    background-color: whitesmoke;
+    border: 1px solid rgb(219, 219, 219);
+    width: 100%;
+   
+    // display: flex;
+    // align-items: center;
+    // justify-items: center;
+    // align-content: center;
+    // justify-content: center;
 }
 .sectionDivider{
     width: 100%;
@@ -45,6 +68,56 @@
     margin: 0px;
 
 }
-#divUserImg{
-    width: 50%;
+
+/*Este modifica el div de imagen de usauriod e post*/
+// #divUserImg{     
+//     height: 2rem;
+// }
+
+#postImg{
+    height: 3rem;
+    border-radius: 360px;
+}
+
+#subButton{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+#newComment{
+    width: 100%;
+    margin: 0px;
+    border-radius: 5px;
+    
+}
+#divCommentsGroup{
+    background-color: whitesmoke;
+}
+// .postInfo{
+//     background-color: whitesmoke;
+//     width: 100%;
+// }
+
+#coverImg{
+    width: 100%;
+    padding: 0px 0px 10px 0px ;
+    margin: 0px;
+}
+// #divDetallesPost{
+//     background-color: whitesmoke;
+//     border: 2px solid rgb(219, 219, 219);
+//     width: 100%;
+    
+// }
+
+
+//ESTILIZADO DE GRUPO DE DISCUSSIÓN//@at-root
+
+#newComment{
+    
 }

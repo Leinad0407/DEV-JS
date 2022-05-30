@@ -262,10 +262,10 @@ div .fifthPost{
 .saveButton{
     display: flex;
     align-content: center;
-    align-items: center;
+    
     justify-content: center;
-    justify-items: center;
-    height: 30px;
+    
+    height: 2rem;
     width: 3rem;
     padding: 5px;
     border: 1px solid rgba(128, 128, 128, 0);
@@ -278,11 +278,11 @@ div .fifthPost{
 .interactionsIcons{
     height: 1rem;
     padding: 1px;
-    margin: 0 10px 0 0;
+    margin: 0 5px 0 0;
 }
 
 .interactionsSpan{
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .userImgn{
@@ -291,11 +291,21 @@ div .fifthPost{
     border-radius: 360px;
 }
 
-#titleLink{
+.titleLink{
     color: black;
     text-transform: uppercase;
 }
 .reactionsTexts{
     font-size: small;
+}
+
+#readAndSave{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
 }
 
