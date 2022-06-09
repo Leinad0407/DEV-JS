@@ -20,5 +20,17 @@ app.use(express.json());
 
 app.use("/posts",postsRouter)
 
+mongoose
+    .connect(URL)
+    .then(()=>{
+        console.log("Estamos conectados a la base de datos de posts para nuestro RETO DEVTO")
+        app.listen(PORT,()=>{
+            console.log("Server ejecutandose en el puerto",PORT)
+        })
+    })
+    .catch((error)=>{
+        console.error("Hubo un error:",error)
+    })
+
 
 
