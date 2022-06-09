@@ -356,14 +356,10 @@ div .fifthPost {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-items: center;
-  height: 30px;
+  height: 2rem;
   width: 3rem;
   padding: 5px;
   border: 1px solid rgba(128, 128, 128, 0);
@@ -373,19 +369,45 @@ div .fifthPost {
 }
 
 .interactionsIcons {
-  height: 60%;
+  height: 1rem;
   padding: 1px;
-  margin: 0 10px 0 0;
+  margin: 0 5px 0 0;
 }
 
 .interactionsSpan {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
-.userImg {
-  height: 50%;
+.userImgn {
+  height: 3rem;
   width: auto;
   border-radius: 360px;
+}
+
+.titleLink {
+  color: black;
+  text-transform: uppercase;
+}
+
+.reactionsTexts {
+  font-size: small;
+}
+
+#readAndSave {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  margin: 0px;
 }
 
 .adl ul a:hover {
@@ -413,6 +435,101 @@ footer span:nth-child(9) {
 
 footer span:nth-child(13) {
   color: blue;
+}
+
+#divMaestroShowPost {
+  background-color: whitesmoke;
+  height: auto;
+}
+
+#espaciofixed {
+  height: 80px;
+  background-color: red;
+  border: 1px solid black;
+  position: static;
+}
+
+#postViewCard {
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+}
+
+#postViewComments {
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+}
+
+.sectionDivider {
+  width: 100%;
+}
+
+#divSplit {
+  width: 100%;
+}
+
+#bodyContainer {
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+}
+
+.reactionsTexts {
+  font-size: small;
+  margin-right: 20px;
+}
+
+#divCommentsGroup {
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+
+.userImg {
+  height: 2rem;
+  width: auto;
+  border-radius: 360px;
+}
+
+#bodyContainer {
+  margin: 0px;
+}
+
+/*Este modifica el div de imagen de usauriod e post*/
+#postImg {
+  height: 3rem;
+  border-radius: 360px;
+}
+
+#subButton {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+#newComment {
+  width: 100%;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+#divCommentsGroup {
+  background-color: whitesmoke;
+}
+
+#coverImg {
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
 }
 
 @media (min-width: 200px) and (max-width: 767px) {

@@ -133,6 +133,7 @@ const onGetRequest = (person) => {
                 console.log(response)
 
                 for(let property in response ) {
+                    console.log([property])
                     response[property]
                     
                     remotePostList.push(response[property])
@@ -140,7 +141,7 @@ const onGetRequest = (person) => {
 
                 console.log(remotePostList)
                 renderCointainersPosts(remotePostList)
-                renderCointainersPosts2(remotePostList)
+                renderCointainersPosts2(remotePostList.reverse())
             
             }
         }
@@ -200,7 +201,7 @@ const createPostsList= (postLista,index) =>{
 
     let divRead=document.createElement('div')
     divRead.classList.add('col')
-    divRead.classList.add('col-4')
+    divRead.classList.add('col-3')
     divRead.classList.add('col-md-3')
     let spanRead = document.createElement('span')
 
@@ -251,7 +252,7 @@ const createPostsList= (postLista,index) =>{
     
     
 }
-//*****esta es la lista renderizada buena*****//
+//*****esta es la lista renderizada buena*****//------------------>>>>>>>>
 const renderRemoteList=(listaposts)=>{
     let divMaestro=document.createElement('div')
     divMaestro.classList.add('col')
@@ -271,8 +272,10 @@ const renderRemoteList=(listaposts)=>{
     divUserImg.classList.add('col-2')
     divUserImg.classList.add('col-md-2')
     let imgLabel = document.createElement('img')
-    imgLabel.classList.add('userImg')
-    imgLabel.setAttribute('src','https://res.cloudinary.com/practicaldev/image/fetch/s--Ea1OGrCb--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1/f451a206-11c8-4e3d-8936-143d0a7e65bb.png')
+    imgLabel.classList.add('userImgn')
+
+    //****Aquí se debe crear una imagen de perfil random *//
+    imgLabel.setAttribute('src',listaposts.userImg)
 
     let divUserName=document.createElement('div')
     divUserName.classList.add('col')
@@ -301,9 +304,11 @@ const renderRemoteList=(listaposts)=>{
  
     
     
-    delButton.setAttribute('class','deleteButton')
+    delButton.setAttribute('id','deleteButton')
     delButton.textContent='Delete'
     let h6postUserName=document.createElement('h6')
+    let anchorUsername= document.createElement('a')
+    anchorUsername.setAttribute('href','/')
     let postDate=document.createElement('p')
     
     let divPostTitle=document.createElement('div')
@@ -311,10 +316,16 @@ const renderRemoteList=(listaposts)=>{
     divPostTitle.classList.add('col-8')
     divPostTitle.classList.add('col-md-10')
     let h3postTitle=document.createElement('h3')
+    let anchorPostTitle = document.createElement('a')
+    anchorPostTitle.setAttribute('href','./postView.html')
+    anchorPostTitle.classList.add('titleLink')
 
     let divHashtags = document.createElement('div')
     let spanTag = document.createElement('span')// este span se agrego para la segunda iteración de objetos
-    let hashtagList = listaposts.hashtags
+    let hashtagList = listaposts.hashtags ||[]
+    
+    console.log(listaposts.hashtags)
+    console.log(hashtagList)
     
     
     let divInteractions=document.createElement('div')
@@ -322,11 +333,13 @@ const renderRemoteList=(listaposts)=>{
     divInteractions.classList.add('col-8')
     divInteractions.classList.add('col-md-8')
     let spanReactions = document.createElement('span')
+    spanReactions.classList.add('reactionsTexts')
     spanReactions.classList.add('interactionsSpan')
     let svgReactions = document.createElement('img')
     svgReactions.classList.add('interactionsIcons')
     svgReactions.setAttribute('src','./img/heart.svg')
     let spanComments = document.createElement('span')
+    spanComments.classList.add('reactionsTexts')
     spanComments.classList.add('interactionsSpan')
     let svgComments = document.createElement('img')
     svgComments.classList.add('interactionsIcons')
@@ -334,13 +347,15 @@ const renderRemoteList=(listaposts)=>{
 
     let divRead=document.createElement('div')
     divRead.classList.add('col')
-    divRead.classList.add('col-4')
-    divRead.classList.add('col-md-4')
+    divRead.classList.add('col-3')
+    divRead.classList.add('col-md-3')
+    divRead.classList.add('reactionsTexts')
+    divRead.setAttribute('id','readAndSave')
     let spanRead = document.createElement('span')
-
+    
     let btnSave = document.createElement('button')
     btnSave.classList.add('saveButton')
-    
+      
 
     let divMasterPostList=document.querySelector('#homePosts')
 
@@ -358,17 +373,17 @@ const renderRemoteList=(listaposts)=>{
 
     //Aquí termina la iteración de la primer estrutura de datos
 
-    //Función para iterar los nuevos hashtags//
-    // hashtagList.forEach((tags)=>{
-    //     hashtagArray.push(tags)
-    // })
-    // console.log(hashtagArray)
+    //**********Función para iterar los nuevos hashtags************//
+    hashtagList.forEach((tags)=>{
+          hashtagArray.push('#'+tags)
+    })
+      console.log(hashtagArray)
     
 
-    h6postUserName.textContent = `${listaposts.name} ${listaposts.lastname}`
+    anchorUsername.textContent = `${listaposts.name} ${listaposts.lastname}`
     postDate.textContent =listaposts.date
 
-    h3postTitle.textContent=listaposts.title
+    anchorPostTitle.textContent=listaposts.title
 
     spanTag.textContent = hashtagArray
 
@@ -379,6 +394,7 @@ const renderRemoteList=(listaposts)=>{
 
     btnSave.textContent="save"
     divUserImg.appendChild(imgLabel)
+    h6postUserName.appendChild(anchorUsername)
     divUserName.appendChild(h6postUserName)
     divUserName.appendChild(postDate)
 
@@ -386,6 +402,7 @@ const renderRemoteList=(listaposts)=>{
 
     divHashtags.appendChild(spanTag)//agregamos el contenido al hastag
 
+    h3postTitle.appendChild(anchorPostTitle)
     divPostTitle.appendChild(h3postTitle)
     divInteractions.appendChild(svgReactions)
     divInteractions.appendChild(spanReactions)
@@ -407,6 +424,8 @@ const renderRemoteList=(listaposts)=>{
     divRow.appendChild(divRead)
     console.log(divRow)
     divMasterPostList.appendChild(divRow)
+
+    
     
    
    
@@ -429,5 +448,16 @@ const renderCointainersPosts = (remotePostList)=>{
     })
 
 }
+
+let titulos = document.querySelectorAll('.titleLink')
+console.log(titulos)
+
+// let hashtag = hash
+    titulos.addEventListener('click',()=>{
+        localStorage.setItem([property])
+
+    })
+    
+
 
 

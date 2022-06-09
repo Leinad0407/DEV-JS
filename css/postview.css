@@ -1,0 +1,95 @@
+#divMaestroShowPost {
+  background-color: whitesmoke;
+  height: auto;
+}
+
+#espaciofixed {
+  height: 80px;
+  background-color: red;
+  border: 1px solid black;
+  position: static;
+}
+
+#postViewCard {
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+}
+
+#postViewComments {
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+}
+
+.sectionDivider {
+  width: 100%;
+}
+
+#divSplit {
+  width: 100%;
+}
+
+#bodyContainer {
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+}
+
+.reactionsTexts {
+  font-size: small;
+  margin-right: 20px;
+}
+
+#divCommentsGroup {
+  margin: 10px 0 0 0;
+  padding: 10px;
+}
+
+.userImg {
+  height: 2rem;
+  width: auto;
+  border-radius: 360px;
+}
+
+#bodyContainer {
+  margin: 0px;
+}
+
+/*Este modifica el div de imagen de usauriod e post*/
+#postImg {
+  height: 3rem;
+  border-radius: 360px;
+}
+
+#subButton {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+#newComment {
+  width: 100%;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+#divCommentsGroup {
+  background-color: whitesmoke;
+}
+
+#coverImg {
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+}
+/*# sourceMappingURL=postview.css.map */
