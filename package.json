@@ -1,0 +1,25 @@
+{
+  "name": "dev-js",
+  "version": "0.0.1",
+  "description": "Reto Dev.To",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemons index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leinad0407/DEV-JS.git"
+  },
+  "author": "Equipo 1 Kodeawards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leinad0407/DEV-JS/issues"
+  },
+  "homepage": "https://github.com/Leinad0407/DEV-JS#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.6",
+    "nodemon": "^2.0.16"
+  }
+}

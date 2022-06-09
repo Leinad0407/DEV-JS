@@ -164,7 +164,7 @@ const createPostsList= (postLista,index) =>{
     
     
 }
-//*****esta es la lista renderizada buena*****//
+//*****esta es la lista renderizada buena*****//------------------>>>>>>>>
 const renderRemoteList=(listaposts)=>{
     let divMaestro=document.createElement('div')
     divMaestro.classList.add('col')
