@@ -1,0 +1,123 @@
+#divMaestroShowPost{
+    background-color: whitesmoke ;
+    height: auto;
+}
+
+#espaciofixed{
+    height: 80px;
+    background-color: red;
+    border: 1px solid black;
+    position: static;
+}
+#postViewCard{
+    width: 100%;
+    
+
+    
+    background-color: whitesmoke;
+    border: 1px solid rgb(219, 219, 219);
+    width: 100%;
+   
+    // display: flex;
+    // align-items: center;
+    // justify-items: center;
+    // align-content: center;
+    // justify-content: center;
+}
+#postViewComments{
+    width: 100%;
+    
+
+    
+    background-color: whitesmoke;
+    border: 1px solid rgb(219, 219, 219);
+    width: 100%;
+   
+    // display: flex;
+    // align-items: center;
+    // justify-items: center;
+    // align-content: center;
+    // justify-content: center;
+}
+.sectionDivider{
+    width: 100%;
+}
+#divSplit{
+    width: 100%;
+}
+#bodyContainer{
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 10px;
+}
+.reactionsTexts{
+    font-size: small;
+    margin-right: 20px;
+}
+#divCommentsGroup{
+    margin: 10px 0 0 0;
+    padding: 10px;
+
+}
+.userImg{
+    height: 2rem;
+    width: auto;
+    border-radius: 360px;
+}
+
+#bodyContainer{
+    margin: 0px;
+
+}
+
+/*Este modifica el div de imagen de usauriod e post*/
+// #divUserImg{     
+//     height: 2rem;
+// }
+
+#postImg{
+    height: 3rem;
+    border-radius: 360px;
+}
+
+#subButton{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+#newComment{
+    width: 100%;
+    margin: 0px;
+    border-radius: 5px;
+    
+}
+#divCommentsGroup{
+    background-color: whitesmoke;
+}
+// .postInfo{
+//     background-color: whitesmoke;
+//     width: 100%;
+// }
+
+#coverImg{
+    width: 100%;
+    padding: 0px 0px 10px 0px ;
+    margin: 0px;
+}
+// #divDetallesPost{
+//     background-color: whitesmoke;
+//     border: 2px solid rgb(219, 219, 219);
+//     width: 100%;
+    
+// }
+
+
+//ESTILIZADO DE GRUPO DE DISCUSSIÓN//@at-root
+
+#newComment{
+    
+}
